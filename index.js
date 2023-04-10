@@ -4,11 +4,17 @@ const button = document.querySelector('#myButton');
 
 
 function gridSize(size) {
+    const itemWidth = 100 / size;
+    const itemHeight = 100 / size;
+
     mainClass.innerHTML = "";
+    mainClass.style.setProperty("--size", size);
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++){
             const div = document.createElement("div");
             div.classList.add("block");
+            div.style.width = itemWidth + '%';
+            div.style.height = itemHeight + '%';
             div.style.border = "medium solid black"
             div.style.borderColor = "black";
             const textNode = document.createTextNode("\u00A0");
@@ -25,18 +31,8 @@ function gridSize(size) {
 }
 }
 
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++){
-        const div = document.createElement("div");
-        div.classList.add("block");
-        div.style.border = "medium solid black"
-        div.style.borderColor = "black";
-        const textNode = document.createTextNode("\u00A0");
-        div.appendChild(textNode);
-        mainClass.appendChild(div);
-        
-    }    
-}
+gridSize(16);
+
 
 const blocks = document.querySelectorAll('.block');
 for (let i = 0; i < blocks.length; i++) {

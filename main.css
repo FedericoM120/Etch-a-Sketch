@@ -5,17 +5,18 @@
     margin-bottom: 100px;
 }
 .mainClass {
-    max-width: 960px;
-    max-height: 960px;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+    width: 960px;
+}
+
+:root {
+    --size: 16;
 }
 
 .mainClass > div {
-    flex: 1 0 calc(100%/16);
-    height: calc(100%/16);
+    flex: 1 0 calc(100%/ var(--size));
+    height: calc(100%/ var(--size));
     box-sizing: border-box;
 }
 
