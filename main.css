@@ -1,4 +1,12 @@
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
 .mainClass {
+    max-width: 960px;
+    max-height: 960px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
