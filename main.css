@@ -2,12 +2,14 @@
 .button{
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
+    margin: 75px auto;
 }
 .mainClass {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 960px;
+    width: 500px;
+    margin: 0 auto;
 }
 
 :root {
