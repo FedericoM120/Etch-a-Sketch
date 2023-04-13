@@ -8,7 +8,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 500px;
+    width: 960px;
+    height: 960px;
     margin: 0 auto;
 }
 
@@ -20,6 +21,7 @@
     flex: 1 0 calc(100%/ var(--size));
     height: calc(100%/ var(--size));
     box-sizing: border-box;
+    border: black;
 }
 
 

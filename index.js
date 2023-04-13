@@ -1,8 +1,6 @@
 const mainClass = document.querySelector('.mainClass');
 const button = document.querySelector('#myButton');
 
-
-
 function gridSize(size) {
     const itemWidth = 100 / size;
     const itemHeight = 100 / size;
@@ -15,7 +13,7 @@ function gridSize(size) {
             div.classList.add("block");
             div.style.width = itemWidth + '%';
             div.style.height = itemHeight + '%';
-            div.style.border = "medium solid black"
+            div.style.borderWidth = '0';
             div.style.borderColor = "black";
             const textNode = document.createTextNode("\u00A0");
             div.appendChild(textNode);
@@ -46,6 +44,10 @@ for (let i = 0; i < blocks.length; i++) {
 const buttonSelector = document.querySelector('button');
 
 function ask() {
-    var size = prompt("How large should the grid be?");
+    var size = prompt("How large should the grid be? Enter one value for both column and row length.");
+    while (size > 64) {
+        var size = prompt("Grid should be 64x64 or smaller. How large should the grid be?");
+    }
     gridSize(size);
 }
+
